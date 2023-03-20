@@ -13,7 +13,8 @@ function isEmailValid(email) {
 
 function onClickRecPassword() {
     if ( isEmailValid(email) ){
-        alert('implementar aqui a troca de senha');
+        let storage =  new StorageService();
+        storage.save(email.value, email);
     }
     else {
       alert('implementar aqui a mensagem de erro');
@@ -22,4 +23,31 @@ function onClickRecPassword() {
 
 function onClickCancel(){
     alert('implementar aqui a funçao de cancelar e retornar a tela de login');
+}
+
+class StorageService {
+    get (email) {
+        return JSON.parse(localStorage.getItem(email));
+    }
+
+    save(email, data){
+        const toSave = JSON.stringify(email, data);
+        localStorage.setItem(email, toSave);
+    }
+
+    push(email, data) {
+        let storage = JSON.parse(localStorage.getItem(email));
+        if(storage === null) storage = [];
+        if(!storage.isArray()) {
+            const element = storage;
+            storage = [].push(element);
+        }
+
+        storage.push(data);
+        localStorage.setItem(email.stringify(storage));
+    }
+
+    delete(email) {
+        localStorage.removeItem(email);
+    }
 }
