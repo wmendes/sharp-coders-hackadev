@@ -115,7 +115,7 @@ function validateForm() {
   }
 }
 
-const formData = loadFormData();
+
 
 termCheckbox.addEventListener('change', function () {
   salvarJsonFormData();
@@ -146,23 +146,23 @@ function saveFormData(formData) {
   localStorage.setItem('formData', formDataJson);
 }
 
+
+loadFormData();
+
 function loadFormData() {
-  // Obtenha a string JSON armazenada na local storage
-  const formDataJson = localStorage.getItem('formData') || salvarJsonFormData();
+  //   // Obtenha a string JSON armazenada na local storage
+  const formDataJson = localStorage.getItem('formData');
 
-  // Se houver dados na local storage, preencha os campos do formulário
-  if (formDataJson) {
-    const formData = JSON.parse(formDataJson);
+  const formData = JSON.parse(formDataJson);
 
-    cpfInput.value = formData.cpf;
-    usernameInput.value = formData.username;
-    phonenumberInput.value = formData.phonenumber;
-    emailInput.value = formData.email;
-    passwordInput.value = formData.password;
-    termCheckbox.checked = formData.termos;
+  cpfInput.value = formData.cpf;
+  usernameInput.value = formData.username;
+  phonenumberInput.value = formData.phonenumber;
+  emailInput.value = formData.email;
+  passwordInput.value = formData.password;
+  termCheckbox.checked = formData.termos;
 
-    return formDataJson;
-  }
+  return formDataJson;
 }
 
 const termLink = document.getElementById("terms-link");
