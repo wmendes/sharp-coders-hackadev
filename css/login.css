@@ -84,6 +84,10 @@ form label span {
     padding-left: 5px;
     font-size: 15px;
     color: #000000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
 }
 
 
@@ -158,7 +162,7 @@ section.images img {
 
 
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1200px) {
     section.imagem {
         display: none;
         visibility: hidden;
@@ -208,4 +212,45 @@ section.images img {
         font-size: 16px;
     }
 
+}
+@media only screen and (max-width: 450px){
+
+    
+    body{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-container{
+        width: 70vw;
+        
+    }
+    
+    .checksenha{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        
+    }
+    #forgot-pass{
+        margin: 0;
+    }
+    .checkbox-text{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    .botao-login{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    #botao-login{
+        margin: 0;
+    }
 }
