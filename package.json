@@ -1,0 +1,24 @@
+{
+  "name": "sharp-coders-hackadev",
+  "version": "1.0.0",
+  "description": "![1(1)](https://user-images.githubusercontent.com/103146024/224352567-a8483534-61f7-42ee-954a-e2353c35edaf.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LKSFerreira/sharp-coders-hackadev.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LKSFerreira/sharp-coders-hackadev/issues"
+  },
+  "homepage": "https://github.com/LKSFerreira/sharp-coders-hackadev#readme",
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "jest-puppeteer": "^8.0.6",
+    "puppeteer": "^19.8.0"
+  }
+}
