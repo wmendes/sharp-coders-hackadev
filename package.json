@@ -4,7 +4,8 @@
   "description": "![1(1)](https://user-images.githubusercontent.com/103146024/224352567-a8483534-61f7-42ee-954a-e2353c35edaf.png)",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "start" : "npx http-server --silent -p 8001",
+    "test": "npx start-server-and-test :8001 jest"
   },
   "repository": {
     "type": "git",
